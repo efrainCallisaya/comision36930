@@ -1,3 +1,6 @@
+//<
+//<
+
 let anio = prompt("ingresa tu año");
 const anioActual = 2022;
 let edad = anioActual-anio;
@@ -8,3 +11,5 @@ if(edad >= 18){
     edadrestante = 18 - edad;
     alert("te falta " + edadrestante)
 }
+
+
