@@ -8,7 +8,7 @@ function card (typeCard, total) {
         return TotalCuota;
        
     }else{
-        alert("No puede pagar en cuotas");
+        alert("No puede pagar en cuotas: ");
         return total;
     }
 }
@@ -51,5 +51,5 @@ while( producto != "SALIR"){
 
 let typeCard = prompt("Ingrese tipo de tarjeta(DEBITO o CREDITO)");
 const totalCuota = card (typeCard, total)
-alert("Usted debera pagar: " + totalCuota + "en " + cuota + " MESES")
+alert("Usted debera pagar: " + totalCuota + " en " + cuota + " MESES")
 
