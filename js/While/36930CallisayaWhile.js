@@ -1,8 +1,10 @@
 
-let producto = prompt("Ingrese un producto 'gaseosa, papas, jugo, alfajor")
 
-let precio = 0
-let total =0
+
+
+
+
+
 while( producto != "SALIR"){
    switch(producto) {
       case "gaseosa":
