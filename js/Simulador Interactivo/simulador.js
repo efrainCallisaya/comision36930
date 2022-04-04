@@ -8,7 +8,6 @@ function card (typeCard, total) {
         return TotalCuota;
        
     }else{
-        alert("No puede pagar en cuotas: ");
         return total;
     }
 }
@@ -34,13 +33,24 @@ function produto (produto) {
     }
     return precio
 }
+function mensaje (totalCuota, cuota) {
+
+    if (cuota === 0 ) {
+        alert(" No puede pagar en cuotas, debe abonar la totalidad ");
+    }else{
+        alert("Usted debera pagar: " + totalCuota + " en " + cuota + " MESES")
+    }
+    
+
+}
+
 
 
 //////////////////////////////////////////////////////////////////////////////
 
 let producto = prompt("Ingrese un producto 'gaseosa, papas, jugo, alfajor")
 let total =0
-let cuota= 0
+let cuota =0
 
 while( producto != "SALIR"){
     let precio = produto (produto);
@@ -51,5 +61,4 @@ while( producto != "SALIR"){
 
 let typeCard = prompt("Ingrese tipo de tarjeta(DEBITO o CREDITO)");
 const totalCuota = card (typeCard, total)
-alert("Usted debera pagar: " + totalCuota + " en " + cuota + " MESES")
-
+mensaje(totalCuota, cuota);
