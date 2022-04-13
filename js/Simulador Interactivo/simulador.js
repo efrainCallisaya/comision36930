@@ -12,7 +12,7 @@ function card (typeCard, total) {
     }
 }
 
-function produto (produto) {
+function produto () {
     switch(producto) {
         case "gaseosa":
            precio = 100
@@ -33,6 +33,7 @@ function produto (produto) {
     }
     return precio
 }
+
 function mensaje (totalCuota, cuota) {
 
     if (cuota === 0 ) {
@@ -44,16 +45,15 @@ function mensaje (totalCuota, cuota) {
 
 }
 
-
-
 //////////////////////////////////////////////////////////////////////////////
 
 let producto = prompt("Ingrese un producto 'gaseosa, papas, jugo, alfajor")
 let total =0
 let cuota =0
 
+
 while( producto != "SALIR"){
-    let precio = produto (produto);
+    let precio = produto ();
    total = total + precio;
    alert("precio en carrito:  " + total)
    producto = prompt("Ingrese un producto 'gaseosa, papas, jugo, alfajor")

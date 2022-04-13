@@ -2,7 +2,8 @@
 
 
 
-
+let producto = prompt("Ingrese un producto 'gaseosa, papas, jugo, alfajor")
+let total =0
 
 
 while( producto != "SALIR"){
