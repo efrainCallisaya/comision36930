@@ -10,9 +10,6 @@ class Producto {
         this.precio = this.precio * 1.21;
     }
 }
-
-
-
 const listproductos = [
     {nombre: 'GASEOSA', precio:100, cantidad:10},
     {nombre: 'PAPAS', precio:70, cantidad:10},
@@ -20,9 +17,7 @@ const listproductos = [
     {nombre: 'ALFAJOR', precio:40, cantidad:10},
 ]
 const addproductatlist = [];
-
 const addIVA =0;
-
 while(true) {
     let Nnombre = prompt("Ingrese Un Nuevo Producto");
     let Pprecio = prompt("Ingrese El precio del producto");
