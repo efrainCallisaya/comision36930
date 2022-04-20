@@ -91,18 +91,17 @@ if(usuario ==usseradmin && contrasenia == passwordadmin){
     
 }else{
     let producto = prompt("Ingrese un producto 'gaseosa, papas, jugo, alfajor").toUpperCase()
-let total =0
 let cuota =0
 
 
 while( producto != "SALIR"){
     const resultado = listproductos.filter((p)=> p.nombre.includes(producto))
-    console.log(resultado);
-   total = total + precio;
-   alert("precio en carrito:  " + total)
-   producto = prompt("Ingrese un producto 'gaseosa, papas, jugo, alfajor")
- }
-
+    compracarrito.push(resultado)
+    console.log(compracarrito) 
+   producto = prompt("Ingrese un producto 'gaseosa, papas, jugo, alfajor").toUpperCase()
+}
+const total= compracarrito.reduce((acc, comp) => acc + comp.precio, 0)
+console.log(total) 
 let typeCard = prompt("Ingrese tipo de tarjeta(DEBITO o CREDITO)");
 const totalCuota = card (typeCard, total)
 mensaje(totalCuota, cuota);
