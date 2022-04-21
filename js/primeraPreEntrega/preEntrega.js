@@ -95,7 +95,7 @@ let cuota =0
 
 
 while( producto != "SALIR"){
-    const resultado = listproductos.filter((p)=> p.nombre.includes(producto))
+    const resultado = listproductos.find((p)=> p.nombre == producto)
     compracarrito.push(resultado)
     console.log(compracarrito) 
    producto = prompt("Ingrese un producto 'gaseosa, papas, jugo, alfajor").toUpperCase()
