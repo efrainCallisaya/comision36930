@@ -1,48 +1,4 @@
 
-
- 
-function card (typeCard, total) {
-    if(typeCard === "CREDITO"){
-        cuota = prompt("Usted puede pagar en 1,2,3,6,9,12 (CUOTAS)")
-        let TotalCuota = total/cuota
-        return TotalCuota;
-       
-    }else{
-        return total;
-    }
-}
-
-function produto () {
-    switch(producto) {
-        case "GASEOSA":
-           precio = 100
-           break
-        case "PAPAS":
-           precio = 70
-           break
-        case "JUGO":
-           precio = 50
-           break
-        case "ALFAJOR": 
-           precio = 40
-           break
-        default:
-           alert ("no existe el producto");
-           precio = 0
-        break
-    }
-    return precio
-}
-
-function mensaje (totalCuota, cuota) {
-
-    if (cuota === 0 ) {
-        alert(" No puede pagar en cuotas, debe abonar la totalidad ");
-    }else{
-        alert("Usted debera pagar: " + totalCuota + " en " + cuota + " MESES")
-    }
-}
-
 let usuario = prompt('ingrese el usuario')
 let contrasenia = prompt('ingrese la contraseña')
 let usseradmin = 'admin'
@@ -81,7 +37,7 @@ if(usuario ==usseradmin && contrasenia == passwordadmin){
         for (const addIVA of addproductatlist) {
             addIVA.addIva();   
         }
-        console.log(addproductatlist);
+        console.log(addproductatlist);  
         
     }else{
         console.log(addproductatlist); 
@@ -90,19 +46,28 @@ if(usuario ==usseradmin && contrasenia == passwordadmin){
     console.log(actualitylist);
     
 }else{
+    const listproductos = [
+        {nombre: 'GASEOSA', precio:100, cantidad:10},
+        {nombre: 'PAPAS', precio:70, cantidad:10},
+        {nombre: 'JUGO', precio:50, cantidad:10},
+        {nombre: 'ALFAJOR', precio:40, cantidad:10},
+    ]
     let producto = prompt("Ingrese un producto 'gaseosa, papas, jugo, alfajor").toUpperCase()
-let cuota =0
-
-
-while( producto != "SALIR"){
-    const resultado = listproductos.find((p)=> p.nombre == producto)
-    compracarrito.push(resultado)
-    console.log(compracarrito) 
-   producto = prompt("Ingrese un producto 'gaseosa, papas, jugo, alfajor").toUpperCase()
-}
-const total= compracarrito.reduce((acc, comp) => acc + comp.precio, 0)
-console.log(total) 
-let typeCard = prompt("Ingrese tipo de tarjeta(DEBITO o CREDITO)");
-const totalCuota = card (typeCard, total)
-mensaje(totalCuota, cuota);
+    let cuota = 0
+    const compracarrito = [];
+    
+    
+    while( producto != "SALIR"){
+        const resultado = listproductos.find((p)=> p.nombre == producto)
+        compracarrito.push(resultado)
+        
+    /* total = total + precio;
+       alert("precio en carrito:  " + total)
+       */ 
+       
+       producto = prompt("Ingrese un producto 'gaseosa, papas, jugo, alfajor").toUpperCase()
+    }
+    console.log(compracarrito)
+    const total = compracarrito.reduce((acc, comp) => acc + comp.precio, 0)
+    alert( "El total de su compra es : " + "$"+total)
 }

@@ -61,4 +61,7 @@ while( producto != "SALIR"){
 
 let typeCard = prompt("Ingrese tipo de tarjeta(DEBITO o CREDITO)");
 const totalCuota = card (typeCard, total)
+console.log(totalCuota)
+console.log(cuota)
+
 mensaje(totalCuota, cuota);
