@@ -31,11 +31,33 @@
                 <a href="./comprasInvierno.html">
                     <button type="button" class="btn btn-outline-primary py-1 border-0">Invierno</button>
                 </a>
-                <button class="btn btn-outline-dark" type="submit">
-                    <i class="bi-cart-fill me-1"></i>
-                    Cart
-                    <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                </button>
+                <div class="dropdown">
+                    <a class="btn btn-outline-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                     Card
+                     <i class="bi-cart-fill me-1"></i></a>
+                  
+                    <ul class="dropdown-menu " id="carrito-list" aria-labelledby="dropdownMenuLink">
+                        <table id="table-carrito">
+                            <thead>
+                              <tr>
+                                <th class="px-3">Imagen</th>
+                                <th class="px-3">Modelo</th>
+                                <th class="px-3">Precio</th>
+                                <th class="px-3">cantidad</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th class="px-3">
+                    
+                                    </th>
+                                </tr>
+                            </tfoot>
+                          </table>
+                    </ul>
+                  </div>
                 <a class="btn btn-primary" href="#signup">Iniciar Sesion</a>
             </div>
         </nav>
@@ -51,7 +73,7 @@
         <!-- Section-->
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" id="lista-cursos">
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Product image-->
@@ -62,12 +84,12 @@
                                     <!-- Product name-->
                                     <h5 class="fw-bolder">Nombre del modelo</h5>
                                     <!-- Product price-->
-                                    $40.00 
+                                   <p> $40.00 </p>
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al carrito</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto agregar-carrito" href="#" data-id="1">Agregar al carrito</a></div>
                             </div>
                         </div>
                     </div>
@@ -81,12 +103,12 @@
                                     <!-- Product name-->
                                     <h5 class="fw-bolder">Nombre del modelo</h5>
                                     <!-- Product price-->
-                                    $40.00 
+                                    <p> $40.00 </p>
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al carrito</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto agregar-carrito" href="#"  data-id="2">Agregar al carrito</a></div>
                             </div>
                         </div>
                     </div>
@@ -100,12 +122,14 @@
                                     <!-- Product name-->
                                     <h5 class="fw-bolder">Nombre del modelo</h5>
                                     <!-- Product price-->
-                                    $40.00 
+                                    <p> $40.00 </p>
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al carrito</a></div>
+                                <div class="text-center">
+                                    <a class="btn btn-outline-dark mt-auto agregar-carrito" href="#"  data-id="3">Agregar al carrito</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -119,12 +143,12 @@
                                     <!-- Product name-->
                                     <h5 class="fw-bolder">Nombre del modelo</h5>
                                     <!-- Product price-->
-                                    $40.00 
+                                    <p> $40.00 </p>
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al carrito</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto agregar-carrito" href="#"  data-id="4">Agregar al carrito</a></div>
                             </div>
                         </div>
                     </div>
@@ -138,12 +162,12 @@
                                     <!-- Product name-->
                                     <h5 class="fw-bolder">Nombre del modelo</h5>
                                     <!-- Product price-->
-                                    $40.00 
+                                    <p> $40.00 </p>
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al carrito</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto agregar-carrito" href="#"  data-id="5">Agregar al carrito</a></div>
                             </div>
                         </div>
                     </div>
@@ -157,12 +181,12 @@
                                     <!-- Product name-->
                                     <h5 class="fw-bolder">Nombre del modelo</h5>
                                     <!-- Product price-->
-                                    $40.00 
+                                    <p> $40.00 </p>
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al carrito</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto agregar-carrito" href="#"  data-id="6">Agregar al carrito</a></div>
                             </div>
                         </div>
                     </div>
@@ -176,12 +200,12 @@
                                     <!-- Product name-->
                                     <h5 class="fw-bolder">Nombre del modelo</h5>
                                     <!-- Product price-->
-                                    $40.00 
+                                    <p> $40.00 </p>
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al carrito</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto agregar-carrito" href="#"  data-id="7">Agregar al carrito</a></div>
                             </div>
                         </div>
                     </div>
@@ -195,12 +219,12 @@
                                     <!-- Product name-->
                                     <h5 class="fw-bolder">Nombre del modelo</h5>
                                     <!-- Product price-->
-                                    $40.00 
+                                    <p> $40.00 </p>
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al carrito</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto agregar-carrito" href="#"  data-id="8">Agregar al carrito</a></div>
                             </div>
                         </div>
                     </div>
@@ -214,6 +238,6 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script src="../js/scripts.js"></script>
     </body>
 </html>
