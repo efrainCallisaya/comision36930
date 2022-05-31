@@ -3,6 +3,9 @@ const listacursos = document.querySelector('#lista-cursos');
 const carrito = document.querySelector('#carrito');
 const carritoList = document.querySelector('#carrito-list tbody');
 const carritotable = document.querySelector('#table-carrito');
+const btncard = document.querySelector('.card-btn')
+
+console.log(btncard);
 let carritocargado=[];
 
 
@@ -26,7 +29,7 @@ function cargarEvenLiteners(){
     document.addEventListener('DOMContentLoaded', () => {
         carritocargado = JSON.parse( localStorage.getItem('carrito') ) || []  ;
         // console.log(articulosCarrito);
-        carritoHTML();
+        carritoHtml();
    });
 
 }
