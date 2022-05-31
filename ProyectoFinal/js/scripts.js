@@ -11,9 +11,24 @@ let carritocargado=[];
 cargarEvenLiteners();
 function cargarEvenLiteners(){
     listacursos.addEventListener('click', agregarCursos);
+    listacursos.addEventListener('click', ()=>{
+        Toastify({
+            text: "Se agregó con exito",
+            className: "info",
+            style: {
+              background: "linear-gradient(to right, green, green)",
+            }
+          }).showToast();
+    });
 
     //elimnar cursos del carrito del
     carritotable.addEventListener('click', elimnarCarrito);
+    document.addEventListener('DOMContentLoaded', () => {
+        carritocargado = JSON.parse( localStorage.getItem('carrito') ) || []  ;
+        // console.log(articulosCarrito);
+        carritoHTML();
+   });
+
 }
 
 function elimnarCarrito(e){
@@ -71,7 +86,6 @@ function leerDatos(detalle){
 
 //mutres en carrito
 function carritoHtml(){
-    
     limpiarhtml()
     carritocargado.forEach(deteCarrito =>{
     const { imagen, nombre, precio, cantidad,id} = deteCarrito;
@@ -93,8 +107,12 @@ function carritoHtml(){
         </td>
         `;
         carritoList.appendChild(row);
-        localStorage.setItem('Carrito', JSON.stringify(carritocargado));
     })
+    sincronizarStorage();
+}
+
+function sincronizarStorage() {
+    localStorage.setItem('carrito', JSON.stringify(carritocargado));
 }
 function limpiarhtml(){
     while(carritoList.firstChild){
